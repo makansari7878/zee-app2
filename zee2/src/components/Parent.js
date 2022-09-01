@@ -5,11 +5,14 @@ export class Parent extends Component {
 
     constructor(){
         super()
+        this.state = {}
+
         this.helloParent = this.helloParent.bind(this)
+          
     }
 
-    helloParent(){
-        alert("Welcome  dude")
+    helloParent(d){
+        alert("Welcome  dude " + d )
     }
 
   render() {
