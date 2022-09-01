@@ -5,7 +5,7 @@ export class Parent extends Component {
 
     constructor(){
         super()
-        this.state = {}
+        this.state = { isLoggedIn : false}
 
         this.helloParent = this.helloParent.bind(this)
           
@@ -16,13 +16,31 @@ export class Parent extends Component {
     }
 
   render() {
-    return (
-      <div>Parent
 
-        <Child helloParent = {this.helloParent}></Child>
-      </div>
+    return this.state.isLoggedIn ? (<div> <h1> Welcome Ansari</h1></div>) : (<div> <h1> Welcome User</h1></div>)
 
-    )
+    // if(this.state.isLoggedIn){
+
+    //     return (
+    //         <div> <h1> Welcome Ansari</h1></div>
+    //     ) 
+    // }
+    //     else{
+    //         return(
+    //             <div> <h1> Welcome User</h1></div>
+    //         )
+    //     }
+
+    // }
+    // return (
+
+       
+    // //   <div>Parent
+
+    // //     <Child helloParent = {this.helloParent}></Child>
+    // //   </div>
+
+    // )
   }
 }
 
